@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/go-redis/redis/v8"
+	"github.com/sneakykiwi/redis/v8"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
@@ -105,7 +105,7 @@ var _ = Describe("pool", func() {
 	})
 
 	It("reuses connections", func() {
-		// explain: https://github.com/go-redis/redis/pull/1675
+		// explain: https://github.com/sneakykiwi/redis/pull/1675
 		opt := redisOptions()
 		opt.MinIdleConns = 0
 		opt.MaxConnAge = 0

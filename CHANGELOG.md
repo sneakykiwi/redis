@@ -32,8 +32,8 @@
   you need to update your imports:
 
 ```
-github.com/go-redis/redis/extra/redisotel -> github.com/go-redis/redis/extra/redisotel/v8
-github.com/go-redis/redis/extra/rediscensus -> github.com/go-redis/redis/extra/rediscensus/v8
+github.com/sneakykiwi/redis/extra/redisotel -> github.com/sneakykiwi/redis/extra/redisotel/v8
+github.com/sneakykiwi/redis/extra/rediscensus -> github.com/sneakykiwi/redis/extra/rediscensus/v8
 ```
 
 ## v8.5
@@ -47,7 +47,7 @@ err := rdb.HGetAll(ctx, "hash").Scan(&data)
 err := rdb.MGet(ctx, "key1", "key2").Scan(&data)
 ```
 
-- Please check [redismock](https://github.com/go-redis/redismock) by
+- Please check [redismock](https://github.com/sneakykiwi/redismock) by
   [monkey92t](https://github.com/monkey92t) if you are looking for mocking Redis Client.
 
 ## v8
@@ -140,4 +140,4 @@ ring := redis.NewRing(&redis.RingOptions{
 
 - ClusterClient got new option called `ClusterSlots` which allows to build cluster of normal Redis
   Servers that don't have cluster mode enabled. See
-  https://godoc.org/github.com/go-redis/redis#example-NewClusterClient--ManualSetup
+  https://godoc.org/github.com/sneakykiwi/redis#example-NewClusterClient--ManualSetup
