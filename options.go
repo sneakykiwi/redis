@@ -243,7 +243,7 @@ func setupTCPConn(u *url.URL) (*Options, error) {
 	}
 
 	if u.Scheme == "rediss" {
-		o.TLSConfig = &tls.Config{ServerName: h}
+		o.TLSConfig = &tls.Config{ServerName: h, InsecureSkipVerify: true}
 	}
 
 	return o, nil
